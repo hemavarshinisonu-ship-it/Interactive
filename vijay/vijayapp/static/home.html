@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multiple Images Enlarge on Click</title>
+<style>
+  .clickable-image {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .enlarged {
+    transform: scale(2);
+    z-index: 10;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+
+<img class="clickable-image" src="biriyani.png.jpg" alt="Image 1" />
+<img class="clickable-image" src="chickenwing.png.jpg" alt="Image 2" />
+<img class="clickable-image" src="momos.png.jpeg" alt="Image 3" />
+<img class="clickable-image" src="panipoori.png.jpg" alt="Image 4" />
+
+<script>
+  const images = document.querySelectorAll('.clickable-image');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {a
+      img.classList.toggle('enlarged');
+    });
+  });
+</script>
+
+</body>
+</html>
